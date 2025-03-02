@@ -26,3 +26,20 @@ func _physics_process(delta):
 	velocity.x = speed * horizontal_direction
 	
 	move_and_slide()
+	
+	print(velocity)
+	
+	update_animation(horizontal_direction)
+	
+func update_animation(horizontal_direction):
+	if is_on_floor():
+		if horizontal_direction == 0:
+			ap.play("idle")
+		else:
+			ap.play("run")
+	else:
+		if velocity.y < 0:
+			ap.play("fall")
+		elif velocity.y > 0:
+			ap.play("jump")
+	
