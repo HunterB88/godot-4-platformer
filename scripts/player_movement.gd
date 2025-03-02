@@ -16,9 +16,11 @@ func _physics_process(delta):
 			velocity.y = 1000
 	
 	if Input.is_action_just_pressed("jump"):
-		velocity.y = -jump_force
+		if is_on_floor():
+			velocity.y = -jump_force
 	
 	var horizontal_direction = Input.get_axis("left", "right")
+	
 	
 	if horizontal_direction != 0:
 		sprite.flip_h = (horizontal_direction == -1)
@@ -32,6 +34,7 @@ func _physics_process(delta):
 	update_animation(horizontal_direction)
 	
 func update_animation(horizontal_direction):
+	
 	if is_on_floor():
 		if horizontal_direction == 0:
 			ap.play("idle")
@@ -43,3 +46,5 @@ func update_animation(horizontal_direction):
 		elif velocity.y > 0:
 			ap.play("jump")
 	
+	#if Input.is_action_just_released("attack"):
+	#	ap.play("attack_1")

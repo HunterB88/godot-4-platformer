@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://cw0ih1fvc62o2"]
+[gd_scene load_steps=15 format=3 uid="uid://cw0ih1fvc62o2"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_huth0"]
 [ext_resource type="Texture2D" uid="uid://td3j8sik5sev" path="res://art/_Idle.png" id="2_ssv63"]
 [ext_resource type="Texture2D" uid="uid://btoe1s24eveav" path="res://art/_Run.png" id="3_simnf"]
 [ext_resource type="Texture2D" uid="uid://lkf2yr7tjsjj" path="res://art/_Jump.png" id="4_ma83a"]
 [ext_resource type="Texture2D" uid="uid://cjukenvdg16bj" path="res://art/_Fall.png" id="5_5hm8y"]
+[ext_resource type="Texture2D" uid="uid://ch08dbn8y52x0" path="res://art/_Attack.png" id="6_5d0qo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4trxa"]
 size = Vector2(21, 38)
@@ -274,9 +275,64 @@ tracks/3/keys = {
 "values": [0, 1, 2]
 }
 
+[sub_resource type="Animation" id="Animation_3d4gf"]
+resource_name = "attack_1"
+length = 0.2
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_5d0qo")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wd6sb"]
 _data = {
 "RESET": SubResource("Animation_s8ayf"),
+"attack_1": SubResource("Animation_3d4gf"),
 "fall": SubResource("Animation_r381v"),
 "idle": SubResource("Animation_uuj5o"),
 "jump": SubResource("Animation_hpwex"),
@@ -290,7 +346,7 @@ gravity = 20
 jump_force = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(4, -40)
+position = Vector2(-2, -40)
 scale = Vector2(1.049, 1)
 texture = ExtResource("2_ssv63")
 hframes = 10
