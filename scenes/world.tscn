@@ -58,5 +58,19 @@ position = Vector2(-1.00001, -5.72205e-06)
 scale = Vector2(2.48438, 0.15625)
 texture = ExtResource("1_g3ecf")
 
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(886, 448)
+rotation = -2.75238
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(161, 190)
+shape = SubResource("RectangleShape2D_hbwk6")
+debug_color = Color(0.925514, 4.23551e-05, 0.675944, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform3/CollisionShape2D"]
+position = Vector2(-1.00001, -5.72205e-06)
+scale = Vector2(2.48438, 0.15625)
+texture = ExtResource("1_g3ecf")
+
 [node name="player" parent="." instance=ExtResource("1_n3pon")]
 position = Vector2(160, 108)
