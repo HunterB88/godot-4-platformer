@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvfnntsepgo2f"
-path="res://.godot/imported/by hunter and charlie.png-762d74c8df1319bc3f32466223a51d99.ctex"
+uid="uid://bdvii1bobbbjk"
+path="res://.godot/imported/image-removebg-preview.png-e35b4708710645429192476da370f437.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/by hunter and charlie.png"
-dest_files=["res://.godot/imported/by hunter and charlie.png-762d74c8df1319bc3f32466223a51d99.ctex"]
+source_file="res://art/title images/image-removebg-preview.png"
+dest_files=["res://.godot/imported/image-removebg-preview.png-e35b4708710645429192476da370f437.ctex"]
 
 [params]
 

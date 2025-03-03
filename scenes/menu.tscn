@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjtrhbt6anvjm"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_qrt3h"]
-[ext_resource type="Texture2D" uid="uid://b1j4boktrxmie" path="res://art/backround.webp" id="2_d7utn"]
-[ext_resource type="Texture2D" uid="uid://dxxnixkm4f806" path="res://art/title.png" id="3_j58d4"]
-[ext_resource type="Texture2D" uid="uid://bvfnntsepgo2f" path="res://art/by hunter and charlie.png" id="4_6hhh8"]
+[ext_resource type="Texture2D" uid="uid://b1j4boktrxmie" path="res://art/title images/backround.webp" id="2_d7utn"]
+[ext_resource type="Texture2D" uid="uid://dxxnixkm4f806" path="res://art/title images/title.png" id="3_j58d4"]
+[ext_resource type="Texture2D" uid="uid://bvfnntsepgo2f" path="res://art/title images/by hunter and charlie.png" id="4_6hhh8"]
 
 [node name="menu" type="Control"]
 layout_mode = 3

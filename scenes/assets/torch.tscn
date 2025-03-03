@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://bxphag2bmmvun"]
+
+[ext_resource type="Texture2D" uid="uid://djoofb8e0puj5" path="res://art/textures/TX FX Torch Flame.png" id="1_7rtrm"]
+[ext_resource type="Texture2D" uid="uid://b7yftrswsr2bw" path="res://art/textures/TX Village Props.png" id="2_ggg4h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhxgw"]
+atlas = ExtResource("1_7rtrm")
+region = Rect2(0, 63, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miqod"]
+atlas = ExtResource("1_7rtrm")
+region = Rect2(21, 63, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3qeb"]
+atlas = ExtResource("1_7rtrm")
+region = Rect2(42, 63, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfx7h"]
+atlas = ExtResource("1_7rtrm")
+region = Rect2(63, 63, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou57i"]
+atlas = ExtResource("1_7rtrm")
+region = Rect2(84, 63, 21, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfnu0"]
+atlas = ExtResource("1_7rtrm")
+region = Rect2(105, 63, 21, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f71d2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhxgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miqod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3qeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfx7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou57i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfnu0")
+}],
+"loop": true,
+"name": &"flame",
+"speed": 14.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_s3hxo"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wj0ev"]
+gradient = SubResource("Gradient_s3hxo")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.844037, 0.12844)
+
+[node name="torch" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 35)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ggg4h")
+region_enabled = true
+region_rect = Rect2(941, 32, 16, 97)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0.615686, 0.113725, 1)
+position = Vector2(-1, -18)
+sprite_frames = SubResource("SpriteFrames_f71d2")
+animation = &"flame"
+autoplay = "flame"
+frame_progress = 0.732958
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_ggg4h")
+region_enabled = true
+region_rect = Rect2(653, 37, 8, 24)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -14)
+color = Color(0.87451, 0.662745, 0, 1)
+energy = 1.5
+texture = SubResource("GradientTexture2D_wj0ev")
+texture_scale = 3.0

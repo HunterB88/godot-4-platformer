@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1j4boktrxmie"
-path="res://.godot/imported/backround.webp-6bea147a549cc326d1ff195a1efd475e.ctex"
+path="res://.godot/imported/backround.webp-d6a95ca1dd909acc596788c05f302267.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/backround.webp"
-dest_files=["res://.godot/imported/backround.webp-6bea147a549cc326d1ff195a1efd475e.ctex"]
+source_file="res://art/title images/backround.webp"
+dest_files=["res://.godot/imported/backround.webp-d6a95ca1dd909acc596788c05f302267.ctex"]
 
 [params]
 
