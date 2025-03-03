@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cw0ih1fvc62o2"]
+[gd_scene load_steps=16 format=3 uid="uid://cw0ih1fvc62o2"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_huth0"]
 [ext_resource type="Texture2D" uid="uid://td3j8sik5sev" path="res://art/player_animations/_Idle.png" id="2_ssv63"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://lkf2yr7tjsjj" path="res://art/player_animations/_Jump.png" id="4_ma83a"]
 [ext_resource type="Texture2D" uid="uid://cjukenvdg16bj" path="res://art/player_animations/_Fall.png" id="5_5hm8y"]
 [ext_resource type="Texture2D" uid="uid://ch08dbn8y52x0" path="res://art/player_animations/_Attack.png" id="6_5d0qo"]
+[ext_resource type="AudioStream" uid="uid://bm48bmymb7vvq" path="res://audio/mario-bros-jump.wav" id="7_4v572"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4trxa"]
 size = Vector2(8.5, 38)
@@ -367,3 +368,7 @@ libraries = {
 "": SubResource("AnimationLibrary_wd6sb")
 }
 autoplay = "idle"
+
+[node name="sfx_jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_4v572")
+volume_db = -10.0
