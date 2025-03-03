@@ -49,6 +49,14 @@ position = Vector2(34, -8)
 scale = Vector2(0.803342, 0.672043)
 texture = ExtResource("3_j58d4")
 
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = -127.0
+offset_top = 114.0
+offset_right = 39.0
+offset_bottom = 148.0
+text = "By: Hunter & Charlie"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
