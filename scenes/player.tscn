@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ch08dbn8y52x0" path="res://art/player_animations/_Attack.png" id="6_5d0qo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4trxa"]
-size = Vector2(21, 38)
+size = Vector2(8.5, 38)
 
 [sub_resource type="Animation" id="Animation_s8ayf"]
 length = 0.001
@@ -341,23 +341,26 @@ _data = {
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_huth0")
-speed = 150
 gravity = 20
-jump_force = 500
+jump_force = 450
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2, -40)
+position = Vector2(5, -40)
 scale = Vector2(1.049, 1)
 texture = ExtResource("2_ssv63")
 hframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, -19)
+position = Vector2(3.25, -19)
 shape = SubResource("RectangleShape2D_4trxa")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(4, -40)
 zoom = Vector2(0.5, 0.5)
+limit_left = -560
+limit_top = -590
+limit_right = 850
+limit_bottom = 220
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

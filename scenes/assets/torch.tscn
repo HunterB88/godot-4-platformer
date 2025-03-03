@@ -72,12 +72,12 @@ region_enabled = true
 region_rect = Rect2(941, 32, 16, 97)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 0.615686, 0.113725, 1)
+modulate = Color(0, 0.336703, 0.747712, 1)
 position = Vector2(-1, -18)
 sprite_frames = SubResource("SpriteFrames_f71d2")
 animation = &"flame"
 autoplay = "flame"
-frame_progress = 0.732958
+frame_progress = 0.328638
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.7, 0.7)
@@ -87,7 +87,7 @@ region_rect = Rect2(653, 37, 8, 24)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(0, -14)
-color = Color(0.87451, 0.662745, 0, 1)
+color = Color(0.0142773, 0.325071, 0.527774, 1)
 energy = 1.5
 texture = SubResource("GradientTexture2D_wj0ev")
 texture_scale = 3.0
