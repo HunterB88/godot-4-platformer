@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bjsdlyjrin8ci"]
+[gd_scene load_steps=14 format=4 uid="uid://bjsdlyjrin8ci"]
 
 [ext_resource type="Texture2D" uid="uid://v2efdh8bclp6" path="res://art/textures/TX Tileset Ground.png" id="1_7jbfy"]
 [ext_resource type="PackedScene" uid="uid://cw0ih1fvc62o2" path="res://scenes/player.tscn" id="1_n3pon"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b7tg3xua1xhef" path="res://scenes/assets/campfire.tscn" id="5_c5r8s"]
 [ext_resource type="Texture2D" uid="uid://b7yftrswsr2bw" path="res://art/textures/TX Village Props.png" id="5_mw1yl"]
 [ext_resource type="PackedScene" uid="uid://b5uj6iowaau2x" path="res://scenes/assets/small_platform.tscn" id="6_iso8v"]
+[ext_resource type="AudioStream" uid="uid://df51xp22xt0l0" path="res://audio/backround_music/First_Level_Music.WAV" id="11_e4see"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoje0"]
 texture = ExtResource("1_7jbfy")
@@ -1745,3 +1746,8 @@ tile_set = SubResource("TileSet_gimvb")
 
 [node name="player" parent="." instance=ExtResource("1_n3pon")]
 position = Vector2(-1, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_e4see")
+volume_db = -12.5
+autoplay = true
