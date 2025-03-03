@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjtrhbt6anvjm"]
+[gd_scene load_steps=5 format=3 uid="uid://cjtrhbt6anvjm"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_qrt3h"]
 [ext_resource type="Texture2D" uid="uid://b1j4boktrxmie" path="res://art/backround.webp" id="2_d7utn"]
 [ext_resource type="Texture2D" uid="uid://dxxnixkm4f806" path="res://art/title.png" id="3_j58d4"]
+[ext_resource type="Texture2D" uid="uid://bvfnntsepgo2f" path="res://art/by hunter and charlie.png" id="4_6hhh8"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -49,20 +50,10 @@ position = Vector2(34, -8)
 scale = Vector2(0.803342, 0.672043)
 texture = ExtResource("3_j58d4")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-layout_mode = 0
-offset_left = -127.0
-offset_top = 114.0
-offset_right = 39.0
-offset_bottom = 148.0
-text = "By: Hunter & Charlie"
-
-[node name="TextEdit2" type="TextEdit" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-scale = Vector2(-11.0509, 12.0034)
-text = "Hello "
+[node name="ByHunterAndCharlie" type="Sprite2D" parent="."]
+position = Vector2(-92, 125)
+scale = Vector2(0.10623, 0.0766331)
+texture = ExtResource("4_6hhh8")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
