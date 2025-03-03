@@ -57,6 +57,13 @@ offset_right = 39.0
 offset_bottom = 148.0
 text = "By: Hunter & Charlie"
 
+[node name="TextEdit2" type="TextEdit" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(-11.0509, 12.0034)
+text = "Hello "
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]
