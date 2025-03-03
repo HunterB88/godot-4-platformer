@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btoe1s24eveav"
-path="res://.godot/imported/_Run.png-c285f0cb04e78f4e64cd3439628342cd.ctex"
+uid="uid://qbsxjfumfpfq"
+path="res://.godot/imported/Mockup2x.png-e54c567c6a726b719520a57764d26022.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/_Run.png"
-dest_files=["res://.godot/imported/_Run.png-c285f0cb04e78f4e64cd3439628342cd.ctex"]
+source_file="res://art/FreeCuteTileset/Mockup2x.png"
+dest_files=["res://.godot/imported/Mockup2x.png-e54c567c6a726b719520a57764d26022.ctex"]
 
 [params]
 

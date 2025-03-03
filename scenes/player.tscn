@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://cw0ih1fvc62o2"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_huth0"]
-[ext_resource type="Texture2D" uid="uid://td3j8sik5sev" path="res://art/_Idle.png" id="2_ssv63"]
-[ext_resource type="Texture2D" uid="uid://btoe1s24eveav" path="res://art/_Run.png" id="3_simnf"]
-[ext_resource type="Texture2D" uid="uid://lkf2yr7tjsjj" path="res://art/_Jump.png" id="4_ma83a"]
-[ext_resource type="Texture2D" uid="uid://cjukenvdg16bj" path="res://art/_Fall.png" id="5_5hm8y"]
-[ext_resource type="Texture2D" uid="uid://ch08dbn8y52x0" path="res://art/_Attack.png" id="6_5d0qo"]
+[ext_resource type="Texture2D" uid="uid://td3j8sik5sev" path="res://art/player_animations/_Idle.png" id="2_ssv63"]
+[ext_resource type="Texture2D" uid="uid://btoe1s24eveav" path="res://art/player_animations/_Run.png" id="3_simnf"]
+[ext_resource type="Texture2D" uid="uid://lkf2yr7tjsjj" path="res://art/player_animations/_Jump.png" id="4_ma83a"]
+[ext_resource type="Texture2D" uid="uid://cjukenvdg16bj" path="res://art/player_animations/_Fall.png" id="5_5hm8y"]
+[ext_resource type="Texture2D" uid="uid://ch08dbn8y52x0" path="res://art/player_animations/_Attack.png" id="6_5d0qo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4trxa"]
 size = Vector2(21, 38)
@@ -357,6 +357,7 @@ shape = SubResource("RectangleShape2D_4trxa")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(4, -40)
+zoom = Vector2(0.5, 0.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

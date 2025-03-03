@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjukenvdg16bj"
-path="res://.godot/imported/_Fall.png-13c1498823cd640d7096aefc7691460c.ctex"
+uid="uid://evp8d03sbpgk"
+path="res://.godot/imported/BG1.png-7619aa20f634187818e8f3699ef3ff77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/_Fall.png"
-dest_files=["res://.godot/imported/_Fall.png-13c1498823cd640d7096aefc7691460c.ctex"]
+source_file="res://art/FreeCuteTileset/BG1.png"
+dest_files=["res://.godot/imported/BG1.png-7619aa20f634187818e8f3699ef3ff77.ctex"]
 
 [params]
 

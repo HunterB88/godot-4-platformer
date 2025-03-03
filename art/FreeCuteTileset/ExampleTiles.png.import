@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch08dbn8y52x0"
-path="res://.godot/imported/_Attack.png-dcb56bc6cb5d21ba1c39bbfed579452c.ctex"
+uid="uid://cjie3hdaov5h8"
+path="res://.godot/imported/ExampleTiles.png-13a8629cb97922cf400f4854803695d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/_Attack.png"
-dest_files=["res://.godot/imported/_Attack.png-dcb56bc6cb5d21ba1c39bbfed579452c.ctex"]
+source_file="res://art/FreeCuteTileset/ExampleTiles.png"
+dest_files=["res://.godot/imported/ExampleTiles.png-13a8629cb97922cf400f4854803695d7.ctex"]
 
 [params]
 

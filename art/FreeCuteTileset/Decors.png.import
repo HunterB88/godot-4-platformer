@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lkf2yr7tjsjj"
-path="res://.godot/imported/_Jump.png-d50b10124e3fe124e2de0175483ab296.ctex"
+uid="uid://bl5c8upo3qin0"
+path="res://.godot/imported/Decors.png-1a8d8f27b3a6608ba6273a4ce7593867.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/_Jump.png"
-dest_files=["res://.godot/imported/_Jump.png-d50b10124e3fe124e2de0175483ab296.ctex"]
+source_file="res://art/FreeCuteTileset/Decors.png"
+dest_files=["res://.godot/imported/Decors.png-1a8d8f27b3a6608ba6273a4ce7593867.ctex"]
 
 [params]
 
