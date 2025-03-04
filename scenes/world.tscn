@@ -1449,7 +1449,7 @@ texture = ExtResource("4_6t2jw")
 [node name="NonCollidableObjects" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="NonCollidableObjects"]
-position = Vector2(148, -65)
+position = Vector2(146, -56)
 texture = ExtResource("5_mw1yl")
 region_enabled = true
 region_rect = Rect2(693, 471, 120, 138)
