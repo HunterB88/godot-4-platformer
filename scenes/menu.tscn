@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjtrhbt6anvjm"]
+[gd_scene load_steps=11 format=3 uid="uid://cjtrhbt6anvjm"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_qrt3h"]
 [ext_resource type="Texture2D" uid="uid://bnvmxesuo4p1a" path="res://art/title images/New_Title_Image (2).webp" id="2_1lkrx"]
-[ext_resource type="Texture2D" uid="uid://dxxnixkm4f806" path="res://art/title images/title.png" id="3_j58d4"]
+[ext_resource type="Theme" uid="uid://dq8gi6s7k4non" path="res://art/buttons/menu_buttons.tres" id="3_aygq8"]
 [ext_resource type="Texture2D" uid="uid://bvfnntsepgo2f" path="res://art/title images/by hunter and charlie.png" id="4_6hhh8"]
+[ext_resource type="Texture2D" uid="uid://cg3gefsbgxyjt" path="res://art/buttons/UI assets Demo (3x).png" id="4_yj8ff"]
+[ext_resource type="FontFile" uid="uid://bx7lvbs040cn8" path="res://art/buttons/Game Paused DEMO.otf" id="5_lwelk"]
 [ext_resource type="AudioStream" uid="uid://qaue214p3e7a" path="res://audio/backround_music/Menu_Music.WAV" id="5_m4wir"]
 [ext_resource type="PackedScene" uid="uid://b7tg3xua1xhef" path="res://scenes/assets/campfire.tscn" id="6_y8hy7"]
 [ext_resource type="PackedScene" uid="uid://bxphag2bmmvun" path="res://scenes/assets/torch.tscn" id="7_j7ay2"]
+
+[sub_resource type="Theme" id="Theme_4i2gw"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -15,8 +19,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 127.0
 offset_top = 37.0
-offset_right = -120.0
-offset_bottom = -41.0
+offset_right = -50.0
+offset_bottom = -92.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qrt3h")
@@ -28,30 +32,47 @@ texture = ExtResource("2_1lkrx")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 20.0
-offset_right = 79.0
-offset_bottom = 121.0
+offset_left = -96.0
+offset_top = 25.0
+offset_right = 33.0
+offset_bottom = 126.0
+scale = Vector2(0.7, 0.7)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
 [node name="play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_aygq8")
 text = "Play"
 
 [node name="options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_aygq8")
 text = "Options"
 
 [node name="exit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_aygq8")
 text = "Exit"
 
-[node name="Title" type="Sprite2D" parent="."]
-position = Vector2(34, -8)
-scale = Vector2(0.803342, 0.672043)
-texture = ExtResource("3_j58d4")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(36, -11)
+scale = Vector2(2, 1)
+texture = ExtResource("4_yj8ff")
+region_enabled = true
+region_rect = Rect2(291, 150, 138, 39)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D2"]
+offset_left = -55.0
+offset_top = -6.0
+offset_right = 85.0
+offset_bottom = 34.0
+theme = SubResource("Theme_4i2gw")
+theme_override_colors/table_border = Color(0.520093, 0.552389, 5.77569e-07, 1)
+theme_override_colors/default_color = Color(0.838529, 0.603221, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_lwelk")
+text = "Shity Ahh Game"
 
 [node name="ByHunterAndCharlie" type="Sprite2D" parent="."]
 position = Vector2(-92, 125)
