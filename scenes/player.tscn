@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cjukenvdg16bj" path="res://art/player_animations/_Fall.png" id="5_5hm8y"]
 [ext_resource type="Texture2D" uid="uid://ch08dbn8y52x0" path="res://art/player_animations/_Attack.png" id="6_5d0qo"]
 [ext_resource type="AudioStream" uid="uid://bm48bmymb7vvq" path="res://audio/mario-bros-jump.wav" id="7_4v572"]
-[ext_resource type="AudioStream" path="res://audio/0304.WAV" id="8_0p6vr"]
+[ext_resource type="AudioStream" uid="uid://dor3qqg487fco" path="res://audio/0304.WAV" id="8_m10pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4trxa"]
 size = Vector2(8.5, 38)
@@ -399,4 +399,4 @@ stream = ExtResource("7_4v572")
 volume_db = -10.0
 
 [node name="sfx_attack" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_0p6vr")
+stream = ExtResource("8_m10pv")
