@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-[gd_scene load_steps=3 format=3 uid="uid://cjtrhbt6anvjm"]
-
-[ext_resource type="Script" path="res://scenes/menu.gd" id="1_qrt3h"]
-[ext_resource type="Texture2D" uid="uid://b1j4boktrxmie" path="res://art/backround.webp" id="2_d7utn"]
-=======
 [gd_scene load_steps=11 format=3 uid="uid://cjtrhbt6anvjm"]
 
-[ext_resource type="Script" path="res://scenes/menu.gd" id="1_qrt3h"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_qrt3h"]
 [ext_resource type="Texture2D" uid="uid://bnvmxesuo4p1a" path="res://art/title images/New_Title_Image (2).webp" id="2_1lkrx"]
 [ext_resource type="Theme" uid="uid://dq8gi6s7k4non" path="res://art/buttons/menu_buttons.tres" id="3_aygq8"]
 [ext_resource type="Texture2D" uid="uid://bvfnntsepgo2f" path="res://art/title images/by hunter and charlie.png" id="4_6hhh8"]
@@ -17,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bxphag2bmmvun" path="res://scenes/assets/torch.tscn" id="7_j7ay2"]
 
 [sub_resource type="Theme" id="Theme_4i2gw"]
->>>>>>> ca03a5dcea9a7008cbdada3cae97a57a743e003b
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -63,8 +56,6 @@ layout_mode = 2
 theme = ExtResource("3_aygq8")
 text = "Exit"
 
-<<<<<<< HEAD
-=======
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(36, -11)
 scale = Vector2(2, 1)
@@ -88,11 +79,6 @@ position = Vector2(-92, 125)
 scale = Vector2(0.10623, 0.0766331)
 texture = ExtResource("4_6hhh8")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_m4wir")
-volume_db = -12.5
-autoplay = true
-
 [node name="campfire" parent="." instance=ExtResource("6_y8hy7")]
 position = Vector2(-36, 122)
 scale = Vector2(0.8, 0.8)
@@ -100,7 +86,11 @@ scale = Vector2(0.8, 0.8)
 [node name="torch" parent="." instance=ExtResource("7_j7ay2")]
 position = Vector2(100, 51)
 
->>>>>>> ca03a5dcea9a7008cbdada3cae97a57a743e003b
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_m4wir")
+volume_db = -15.0
+autoplay = true
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]

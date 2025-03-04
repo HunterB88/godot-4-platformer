@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cw0ih1fvc62o2"]
+[gd_scene load_steps=17 format=3 uid="uid://cw0ih1fvc62o2"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_huth0"]
 [ext_resource type="Texture2D" uid="uid://td3j8sik5sev" path="res://art/player_animations/_Idle.png" id="2_ssv63"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cjukenvdg16bj" path="res://art/player_animations/_Fall.png" id="5_5hm8y"]
 [ext_resource type="Texture2D" uid="uid://ch08dbn8y52x0" path="res://art/player_animations/_Attack.png" id="6_5d0qo"]
 [ext_resource type="AudioStream" uid="uid://bm48bmymb7vvq" path="res://audio/mario-bros-jump.wav" id="7_4v572"]
+[ext_resource type="AudioStream" path="res://audio/0304.WAV" id="8_0p6vr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4trxa"]
 size = Vector2(8.5, 38)
@@ -61,9 +62,21 @@ tracks/3/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:attacking")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_3d4gf"]
-resource_name = "attack_1"
+resource_name = "attack"
 length = 0.2
 loop_mode = 1
 step = 0.05
@@ -114,6 +127,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:attacking")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_r381v"]
@@ -333,7 +358,7 @@ tracks/3/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wd6sb"]
 _data = {
 "RESET": SubResource("Animation_s8ayf"),
-"attack_1": SubResource("Animation_3d4gf"),
+"attack": SubResource("Animation_3d4gf"),
 "fall": SubResource("Animation_r381v"),
 "idle": SubResource("Animation_uuj5o"),
 "jump": SubResource("Animation_hpwex"),
@@ -372,3 +397,6 @@ autoplay = "idle"
 [node name="sfx_jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_4v572")
 volume_db = -10.0
+
+[node name="sfx_attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0p6vr")
