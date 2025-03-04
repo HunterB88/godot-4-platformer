@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://b7tg3xua1xhef"]
+
+[ext_resource type="Texture2D" uid="uid://cynq50xrjeuxf" path="res://art/textures/TX FX Flame.png" id="1_ap0ig"]
+[ext_resource type="Texture2D" uid="uid://b7yftrswsr2bw" path="res://art/textures/TX Village Props.png" id="2_daw7q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uheuh"]
+atlas = ExtResource("1_ap0ig")
+region = Rect2(0, 99, 33, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3tt0"]
+atlas = ExtResource("1_ap0ig")
+region = Rect2(33, 99, 33, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twnhn"]
+atlas = ExtResource("1_ap0ig")
+region = Rect2(66, 99, 33, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nlsa"]
+atlas = ExtResource("1_ap0ig")
+region = Rect2(99, 99, 33, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qdpt"]
+atlas = ExtResource("1_ap0ig")
+region = Rect2(132, 99, 33, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_angll"]
+atlas = ExtResource("1_ap0ig")
+region = Rect2(165, 99, 33, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtw1a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uheuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3tt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twnhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nlsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qdpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_angll")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_lk77n"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tmvc2"]
+gradient = SubResource("Gradient_lk77n")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.821101, 0.133028)
+
+[node name="campfire" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0.466667, 0.196078, 1)
+position = Vector2(-1, -28)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_gtw1a")
+autoplay = "default"
+frame_progress = 0.80058
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -11)
+texture = ExtResource("2_daw7q")
+region_enabled = true
+region_rect = Rect2(354, 265, 61, 23)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -28)
+color = Color(1, 0.498039, 0.227451, 1)
+energy = 1.5
+texture = SubResource("GradientTexture2D_tmvc2")
+texture_scale = 3.0
