@@ -1467,6 +1467,13 @@ texture = ExtResource("5_mw1yl")
 region_enabled = true
 region_rect = Rect2(693, 471, 120, 138)
 
+[node name="Sprite2D40" type="Sprite2D" parent="NonCollidableObjects"]
+position = Vector2(261, 44)
+scale = Vector2(-1, 1)
+texture = ExtResource("5_mw1yl")
+region_enabled = true
+region_rect = Rect2(578.76, 147, 28.24, 44.6165)
+
 [node name="Sprite2D33" type="Sprite2D" parent="NonCollidableObjects"]
 position = Vector2(365, -291)
 scale = Vector2(-1, 1)
